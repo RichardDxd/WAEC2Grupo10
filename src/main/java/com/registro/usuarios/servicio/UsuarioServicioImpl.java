@@ -5,6 +5,7 @@ import java.util.Collection;
 import java.util.List;
 import java.util.stream.Collectors;
 
+import com.registro.usuarios.modelo.dto.UsuarioRegistroDTO;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
@@ -14,9 +15,8 @@ import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
 
-import com.registro.usuarios.controlador.dto.UsuarioRegistroDTO;
-import com.registro.usuarios.modelo.Rol;
-import com.registro.usuarios.modelo.Usuario;
+import com.registro.usuarios.modelo.bd.Rol;
+import com.registro.usuarios.modelo.bd.Usuario;
 import com.registro.usuarios.repositorio.UsuarioRepositorio;
 
 @Service
@@ -37,7 +37,7 @@ public class UsuarioServicioImpl implements UsuarioServicio {
 	public Usuario guardar(UsuarioRegistroDTO registroDTO) {
 		Usuario usuario = new Usuario(registroDTO.getNombre(),
 				registroDTO.getApellido(), registroDTO.getEmail(),
-				passwordEncoder.encode(registroDTO.getPassword()), Arrays.asList(new Rol("ROLE_USER")));
+				passwordEncoder.encode(registroDTO.getPassword()), Arrays.asList(new Rol()));
 		return usuarioRepositorio.save(usuario);
 	}
 
