@@ -1,4 +1,6 @@
-package com.registro.usuarios.modelo;
+package com.registro.usuarios.modelo.bd;
+
+import com.registro.usuarios.modelo.bd.Rol;
 
 import java.util.Collection;
 

@@ -14,9 +14,9 @@ import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
 
-import com.registro.usuarios.controlador.dto.UsuarioRegistroDTO;
-import com.registro.usuarios.modelo.Rol;
-import com.registro.usuarios.modelo.Usuario;
+import com.registro.usuarios.modelo.dto.UsuarioRegistroDTO;
+import com.registro.usuarios.modelo.bd.Rol;
+import com.registro.usuarios.modelo.bd.Usuario;
 import com.registro.usuarios.repositorio.UsuarioRepositorio;
 
 @Service

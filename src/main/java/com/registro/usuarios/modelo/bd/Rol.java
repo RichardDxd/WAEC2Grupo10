@@ -1,4 +1,4 @@
-package com.registro.usuarios.modelo;
+package com.registro.usuarios.modelo.bd;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;

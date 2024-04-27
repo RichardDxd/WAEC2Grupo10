@@ -6,7 +6,7 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-import com.registro.usuarios.controlador.dto.UsuarioRegistroDTO;
+import com.registro.usuarios.modelo.dto.UsuarioRegistroDTO;
 import com.registro.usuarios.servicio.UsuarioServicio;
 
 @Controller
