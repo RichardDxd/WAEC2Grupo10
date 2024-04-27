@@ -1,4 +1,6 @@
-package com.registro.usuarios.modelo;
+package com.registro.usuarios.modelo.bd;
+
+import com.registro.usuarios.modelo.bd.Rol;
 
 import java.util.Collection;
 
@@ -32,13 +34,13 @@ public class Usuario {
 	private String email;
 	@Column(name = "password")
 	private String password;
-	
+
 	@ManyToMany(fetch = FetchType.EAGER,cascade = CascadeType.ALL)
 	@JoinTable(
 			name = "usuarios_roles",
 			joinColumns = @JoinColumn(name = "usuario_id",referencedColumnName = "id"),
 			inverseJoinColumns = @JoinColumn(name = "rol_id",referencedColumnName = "id")
-			)
+	)
 	private Collection<Rol> roles;
 
 	public Long getId() {
@@ -109,7 +111,7 @@ public class Usuario {
 	}
 
 	public Usuario() {
-		
+
 	}
 
 }
